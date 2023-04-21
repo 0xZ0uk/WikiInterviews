@@ -23,6 +23,7 @@ export const wikiRouter = createTRPCRouter({
         page: {
           id: page.pageid,
           title: page.title,
+          image: pageSummary.originalimage?.source,
           description: pageSummary.description,
           summary: pageSummary,
           extract: markdown,

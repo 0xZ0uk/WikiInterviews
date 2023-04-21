@@ -18,5 +18,15 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  webpack: (config) => {
+    config.experiments = config.experiments || {};
+    config.experiments.topLevelAwait = true;
+    config.experiments.asyncWebAssembly = true;
+    config.experiments.layers = true;
+    return config;
+  },
+  images: {
+    domains: ["upload.wikimedia.org"],
+  },
 };
 export default config;
